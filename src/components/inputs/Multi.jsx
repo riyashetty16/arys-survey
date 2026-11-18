@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { isExclusiveLabel, isOtherLabel } from '../../logic/flow.js';
 
 export default function Multi({ q, options, ans, onChange }) {
@@ -21,7 +22,6 @@ export default function Multi({ q, options, ans, onChange }) {
   };
 
   const hint = q.exact ? `Pick ${q.exact}` : max ? `Pick up to ${max}` : 'Tick all that apply';
-  const otherSelected = sel.some(isOtherLabel);
 
   return (
     <>
@@ -33,16 +33,19 @@ export default function Multi({ q, options, ans, onChange }) {
           const on = sel.includes(o);
           const blocked = full && !on && !isExclusiveLabel(o);
           return (
-            <button key={o} type="button" aria-pressed={on} disabled={blocked}
-              className={`opt${on ? ' on' : ''}`} onClick={() => toggle(o)}>
-              {o}
-            </button>
+            <Fragment key={o}>
+              <button type="button" aria-pressed={on} disabled={blocked}
+                className={`opt${on ? ' on' : ''}`} onClick={() => toggle(o)}>
+                {o}
+              </button>
+              {/* The text box opens directly under "Other" */}
+              {on && isOtherLabel(o) && (
+                <input className="field" autoFocus placeholder="Type here" maxLength={120}
+                  value={ans.other || ''} onChange={(e) => onChange({ ...ans, other: e.target.value }, { auto: false })} />
+              )}
+            </Fragment>
           );
         })}
-        {otherSelected && (
-          <input className="field" autoFocus placeholder="Type here" maxLength={120}
-            value={ans.other || ''} onChange={(e) => onChange({ ...ans, other: e.target.value }, { auto: false })} />
-        )}
       </div>
     </>
   );

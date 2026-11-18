@@ -1,7 +1,7 @@
 import { LATE_IDS } from '../data/questions.js';
 import { pick, shuffle } from '../lib/utils.js';
 
-export const isOtherLabel = (l) => typeof l === 'string' && l.includes('___');
+export const isOtherLabel = (l) => typeof l === 'string' && (l.includes('___') || /^Other\b/.test(l));
 export const isExclusiveLabel = (l) => /^(Nothing|None|Never)\b/.test(l);
 export const isPinnedLabel = (l) => isOtherLabel(l) || isExclusiveLabel(l);
 
