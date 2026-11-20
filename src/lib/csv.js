@@ -1,4 +1,5 @@
 import { MAIN_QUESTIONS } from '../data/questions.js';
+import { isOtherLabel } from '../logic/flow.js';
 
 const esc = (v) => {
   const s = v == null ? '' : String(v);
@@ -35,7 +36,7 @@ export function questionOrder(lateQuestions) {
 export function cell(q, a) {
   if (!a || a.v == null) return '';
   const v = a.v;
-  const withOther = (x) => (typeof x === 'string' && x.includes('___') ? `Other: ${a.other || ''}` : x);
+  const withOther = (x) => (isOtherLabel(x) ? `${String(x).replace(/:?\s*_+/, '')}: ${a.other || ''}` : x);
   switch (q.type) {
     case 'single': {
       let out = withOther(v);

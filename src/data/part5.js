@@ -46,12 +46,12 @@ export const PART5_QUESTIONS = [
   // ---------------- Owner questions O12 to O14 (after Part 6) ----------------
   { id: 'O12', part: 'O', label: 'Owner question 12', type: 'multi', text: 'Which of these do you miss from petrol bikes?',
     options: ['Engine sound', 'Vibration', 'Clutch control', 'Gear shifting', 'A bike that responds to my skill',
-      'Nothing', 'Other: ___'] },
+      'Nothing', 'Other'] },
   { id: 'O13', part: 'O', label: 'Owner question 13', type: 'scale',
     text: 'Suppose the idea you just saw were available in your own bike’s class, same price. How likely would you swap to it?' },
   { id: 'O14', part: 'O', label: 'Owner question 14', type: 'multi', text: 'What would keep you with your current brand?', max: 2,
     options: ['Service I trust', 'Resale value', 'Performance', 'Looks', 'Community of owners',
-      'Nothing, I would switch', 'Other: ___'] },
+      'Nothing, I would switch', 'Other'] },
 
   // ---------------- Part 7 ----------------
   { id: 'Q29', part: 7, type: 'single', text: 'How much would buying this from a new start-up worry you?',

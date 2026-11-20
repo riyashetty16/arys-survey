@@ -95,7 +95,7 @@ export const MAIN_QUESTIONS = [
     id: 'Q12', part: 3, type: 'multi', text: 'What holds you back from electric?', max: 3, random: true,
     options: ['Price', 'Range', 'Charging time', 'No home charging', 'Battery replacement cost',
       'Resale value', 'Service', 'Fire or safety worry', 'I do not trust the brands', 'Looks',
-      'Too few choices', 'Nothing', 'Other: ___']
+      'Too few choices', 'Nothing', 'Other']
   },
   {
     id: 'Q13', part: 3, type: 'multitext', text: 'Name up to 3 electric motorcycle brands you know.',
@@ -111,7 +111,7 @@ export const MAIN_QUESTIONS = [
   {
     id: 'Q15', part: 3, type: 'multi', text: 'Why have you not considered Ultraviolette?', max: 2, random: true,
     options: ['Too expensive', 'Unsure about service', 'Do not trust the brand', 'Worried about resale',
-      'Looks', 'Does not suit my needs', 'Not enough range', 'Do not know enough', 'Other: ___']
+      'Looks', 'Does not suit my needs', 'Not enough range', 'Do not know enough', 'Other']
   },
 
   // ---------------- Part 4 ----------------
@@ -135,18 +135,18 @@ export const MAIN_QUESTIONS = [
   {
     id: 'O2', part: 'O', label: 'Owner question 2', type: 'multi', text: 'Why did you buy it?', max: 3,
     options: ['Running cost', 'Performance', 'Looks', 'Technology', 'Indian brand', 'Environment',
-      'Impressed on a test ride', 'Price or subsidy', 'Other: ___']
+      'Impressed on a test ride', 'Price or subsidy', 'Other']
   },
   { id: 'O3', part: 'O', label: 'Owner question 3', type: 'scale', text: 'How likely would you recommend it to a friend?' },
   {
     id: 'O4', part: 'O', label: 'Owner question 4', type: 'multi', text: 'What do you like most about it?', max: 3,
     options: ['Acceleration', 'Low running cost', 'Quiet and smooth', 'Looks', 'App and technology',
-      'Low maintenance', 'Handling', 'Charging at home', 'Pride of owning it', 'Other: ___']
+      'Low maintenance', 'Handling', 'Charging at home', 'Pride of owning it', 'Other']
   },
   {
     id: 'O5', part: 'O', label: 'Owner question 5', type: 'multi', text: 'What annoys you most about it?', max: 3,
     options: ['Real-world range', 'Charging time', 'Finding chargers', 'Slow service', 'Waiting for spares',
-      'Software bugs', 'Battery worry', 'Resale value', 'Build quality', 'Heat', 'Price I paid', 'Other: ___']
+      'Software bugs', 'Battery worry', 'Resale value', 'Build quality', 'Heat', 'Price I paid', 'Other']
   },
   {
     id: 'O6', part: 'O', label: 'Owner question 6', type: 'grid', text: 'How satisfied are you with each?',
@@ -201,11 +201,11 @@ export const MAIN_QUESTIONS = [
     id: 'Q41', part: 9, type: 'single', optional: true, text: 'What do you do?',
     followUp: { when: 'Student', placeholder: 'Course or year' },
     options: ['Student', 'Salaried employee', 'Self-employed or business owner', 'Freelancer', 'Homemaker',
-      'Not working', 'Retired', 'Other: ___']
+      'Not working', 'Retired', 'Other']
   },
   {
     id: 'Q42', part: 9, type: 'single', optional: true, text: 'Your mother tongue.',
-    options: ['Kannada', 'Hindi', 'Tamil', 'Telugu', 'Malayalam', 'Marathi', 'Bengali', 'Gujarati', 'Other: ___']
+    options: ['Kannada', 'Hindi', 'Tamil', 'Telugu', 'Malayalam', 'Marathi', 'Bengali', 'Gujarati', 'Other']
   },
   {
     id: 'Q43', part: 9, type: 'text', optional: true, text: 'Where do you live? City and area, or PIN code.',
